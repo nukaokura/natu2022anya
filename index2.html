@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ナツコミ2022アーニャの部屋</title>
+  </head>
+  <body>
+  <script type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
+    
+  </script>
+    
+    <model-viewer  
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    animation-name="jump"
+    alt="モデル"
+    src="https://nukaokura.github.io/natu2022anya.io/anya5.glb" 
+    ios-src="https://nukaokura.github.io/natu2022anya.io/anya5.usdz" 
+    style="width:100%;height:1280px"                  
+                  
+                  background-color="#70BCD1"
+                  shadow-intensity="0.7"
+                  camera-controls
+                  touch-action="pan-y"
+                  autoplay
+                  interaction-prompt="auto">
+      
+      <button id="custom-ar-button" slot="ar-button">Start AR</button>
+      <style>
+        #custom-ar-button {
+          font-size: 24px;
+          position: absolute;
+          bottom: 32px;
+          left: 16px;
+     　}
+        
+  </style>
+    </model-viewer>
+  </body>
+</html>
