@@ -10,39 +10,6 @@
     
   </script>
     
-  <style>
-  button{
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    border: none;
-    background-color: blue;
-    box-sizing: border-box;
-  }
-
-  button[slot="hotspot-hand"]{
-    --min-hotspot-opacity: 0;
-    background-color: red;
-  }
-
-  button[slot="hotspot-foot"]:not([data-visible]) {
-    background-color: transparent;
-    border: 3px solid blue;
-  }
-
-  #annotation{
-    background-color: #888888;
-    position: absolute;
-    transform: translate(10px, 10px);
-    border-radius: 10px;
-    padding: 10px;
-  }
-  /* This keeps child nodes hidden while the element loads */
-  :not(:defined) > * {
-    display: none;
-  }
-</style>
     <model-viewer  
     ar
     ar-modes="webxr scene-viewer quick-look"
@@ -70,11 +37,5 @@
         
   </style>
     </model-viewer>
-    <button slot="hotspot-visor" data-position="0 1.75 0.35" data-normal="0 0 1"></button>
-    <button slot="hotspot-hand" data-position="-0.54 0.93 0.1" data-normal="-0.73 0.05 0.69" animation-name="jump">
-    <div id="annotation">This hotspot disappears completely</div>
-    </button>
-    <button slot="hotspot-foot" data-position="0.16 0.1 0.17" data-normal="-0.07 0.97 0.23" data-visibility-attribute="visible" animation-name="cross"></button>
-    <div id="annotation">This annotation is fixed in screen-space</div>
   </body>
 </html>
